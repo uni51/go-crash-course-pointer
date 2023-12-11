@@ -12,7 +12,9 @@ func main() {
 
 	fmt.Println("ptrが指すアドレス:", ptr)
 	fmt.Println("ptrが指す値:", *ptr)
-	fmt.Println(num)
+	fmt.Println("ptr自体のアドレス:", &ptr)
+
+	*ptr = 20
 
 	fmt.Println("numの新しい値:", num)
 }
