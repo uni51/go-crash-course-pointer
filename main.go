@@ -1,12 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
 	var num int = 10
 
 	fmt.Println("numのアドレス:", &num)
 	fmt.Println("numの値:", num)
+
+	// 手動でガベージコレクションを実行
+	runtime.GC()
 
 	var ptr *int = &num
 
